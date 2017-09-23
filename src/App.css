@@ -6,22 +6,50 @@
   align-items: center;
   margin: 0;
   height: 100vh;
+  width: 100vw;
 }
 
 .header {
   height: 10vh;
   display: flex;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 .main {
   height: 80vh;
   display: flex;
   justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .footer {
   height: 10vh;
   display: flex;
   justify-content: center;
+  align-content: center;
+  align-items: center;
 }
+
+/*welcome page*/
+
+.welcome .header {
+  background-color: #015249;
+  color: white;
+}
+
+.welcome .main {
+  background-color: #015249;
+  color: white;
+}
+
+.welcome .footer {
+  background-color: #015249;
+  color: white;
+}
+
+
+

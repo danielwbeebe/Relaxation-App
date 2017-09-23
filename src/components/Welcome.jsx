@@ -6,15 +6,15 @@ const Welcome = () => {
     <div className="welcome">
 
       <div className="header">
-        Header
+        <h1>Chill Out App</h1>
       </div>
 
       <div className="main">
-        Main
+        <h1>Welcome!</h1>
       </div>
 
       <div className="footer">
-        Footer
+        <h2>Created By Dan Beebe</h2>
       </div>
 
     </div>

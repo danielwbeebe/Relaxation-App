@@ -9,7 +9,9 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" render={() => <Welcome />} />
+        <div className="App">
+          <Route exact path="/" render={() => <Welcome />} />
+        </div>
       </Router>
     );
   }
