@@ -1,18 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Welcome = () => {
+const Garden = (props) => {
 
   return (
-    <div className="welcome">
+    <div className="garden">
 
       <div className="header">
-        <h1>Chill Out App</h1>
+        <h1>Header</h1>
       </div>
 
       <div className="main">
-        <h1>Welcome!</h1>
-        <Link to="/home"><button className="enter-button"><p>Enter</p></button></Link>
+        <h1>Garden Page</h1>
       </div>
 
       <div className="footer">
@@ -23,4 +22,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome;
+export default Garden;

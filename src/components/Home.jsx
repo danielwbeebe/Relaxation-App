@@ -12,6 +12,7 @@ const Home = (props) => {
 
       <div className="main">
         <h1>Home Page Body</h1>
+        <Link to="/garden"><button className="enter-button"><p>Garden</p></button></Link>
       </div>
 
       <div className="footer">

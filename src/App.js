@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Welcome from './components/Welcome';
 import Home from './components/Home';
+import Garden from './components/Garden';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" render={() => <Welcome />} />
           <Route exact path="/home" render={() => <Home />} />
+          <Route exact path="/garden" render={() => <Garden />} />
         </div>
       </Router>
     );

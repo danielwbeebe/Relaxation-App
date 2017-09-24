@@ -121,5 +121,22 @@ table {
   color: white;
 }
 
+/*garden page*/
+
+.garden .header {
+  background-color: #015249;
+  color: white;
+}
+
+.garden .main {
+  background-color: white;
+  color: black;
+}
+
+.garden .footer {
+  background-color: #015249;
+  color: white;
+}
+
 
 
