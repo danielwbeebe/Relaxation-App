@@ -99,6 +99,17 @@ table {
   color: white;
 }
 
+.enter-button {
+  background-color: #77C9D4;
+  color: white;
+  border-radius: 15px;
+}
+
+.enter-button:hover {
+  background-color: white;
+  color: #77C9D4;
+}
+
 .welcome .footer {
   background-color: #015249;
   color: white;
