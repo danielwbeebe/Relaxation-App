@@ -1,17 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Garden = (props) => {
+const Park = (props) => {
 
   return (
-    <div className="garden">
+    <div className="park">
 
       <div className="header">
         <Link to="/home"><h1>Header</h1></Link>
       </div>
 
       <div className="main">
-        <h1>Garden Page</h1>
+        <h1>Park Page</h1>
       </div>
 
       <div className="footer">
@@ -22,4 +22,4 @@ const Garden = (props) => {
   )
 }
 
-export default Garden;
+export default Park;
