@@ -7,7 +7,7 @@ const Home = (props) => {
     <div className="home">
 
       <div className="header">
-        <h1>Header</h1>
+        <h1>Dan's Relax App</h1>
       </div>
 
       <div className="main">

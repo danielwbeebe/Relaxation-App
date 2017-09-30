@@ -7,7 +7,7 @@ const Welcome = () => {
     <div className="welcome">
 
       <div className="header">
-        <h1>Chill Out App</h1>
+        <h1>Dan's Relax App</h1>
       </div>
 
       <div className="main">
