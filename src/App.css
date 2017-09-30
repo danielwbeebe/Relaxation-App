@@ -166,6 +166,23 @@ table {
   color: white;
 }
 
+/*beach page*/
+
+.beach .header {
+  background-color: #015249;
+  color: white;
+}
+
+.beach .main {
+  background-color: white;
+  color: black;
+}
+
+.beach .footer {
+  background-color: #015249;
+  color: white;
+}
+
 /*fonts*/
 
 h1 {

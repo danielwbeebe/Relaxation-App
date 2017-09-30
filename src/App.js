@@ -7,6 +7,7 @@ import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Garden from './components/Garden';
 import Park from './components/Park';
+import Beach from './components/Beach';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route exact path="/home" render={() => <Home />} />
           <Route exact path="/garden" render={() => <Garden />} />
           <Route exact path="/park" render={() => <Park />} />
+          <Route exact path="/beach" render={() => <Beach />} />
         </div>
       </Router>
     );
