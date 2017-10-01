@@ -71,6 +71,10 @@ table {
   width: 100vw;
 }
 
+.header-link:hover {
+  color: #FF7875;
+}
+
 .main {
   height: 80vh;
   display: flex;
@@ -100,14 +104,14 @@ table {
 }
 
 .enter-button {
-  background-color: #77C9D4;
+  background-color: #FF7875;
   color: white;
   border-radius: 15px;
 }
 
 .enter-button:hover {
   background-color: white;
-  color: #77C9D4;
+  color: #FF7875;
 }
 
 .welcome .footer {
@@ -219,6 +223,10 @@ a:link, a:visited {
   color: white;
   decoration: none;
   text-decoration: none;
+}
+
+a:hover {
+  color: #FF7875;
 }
 
 
