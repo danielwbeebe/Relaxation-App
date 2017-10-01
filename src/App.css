@@ -101,12 +101,35 @@ table {
 .welcome .main {
   background-color: #015249;
   color: white;
+  justify-content: space-around;
+}
+
+.welcome-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.welcome-left img {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+}
+
+.welcome-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .enter-button {
   background-color: #FF7875;
   color: white;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .enter-button:hover {

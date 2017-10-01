@@ -11,12 +11,19 @@ const Welcome = () => {
       </div>
 
       <div className="main">
-        <h1>Welcome!</h1>
-        <Link to="/home"><button className="enter-button"><h3>Enter</h3></button></Link>
+
+        <div className="welcome-left">
+          <Link to="/home"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+        </div>
+
+        <div className="welcome-right">
+          <Link to="/home"><button className="enter-button"><h2>Enter</h2></button></Link>
+        </div>
+
       </div>
 
       <div className="footer">
-        <a href="https://github.com/danielwbeebe" target="_blank" rel="noopener noreferrer"><h2>Created By Dan Beebe</h2></a>
+        <a href="https://github.com/danielwbeebe" target="_blank" rel="noopener noreferrer"><h3>Created By Dan Beebe</h3></a>
       </div>
 
     </div>
