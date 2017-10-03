@@ -150,8 +150,25 @@ table {
 }
 
 .home .main {
+  display: flex;
   background-color: white;
   color: black;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.main-lower {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.enter-garden img, .enter-park img, .enter-beach img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
 }
 
 .home .footer {

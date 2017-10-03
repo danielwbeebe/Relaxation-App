@@ -11,10 +11,23 @@ const Home = (props) => {
       </div>
 
       <div className="main">
-        <h1>Home Page Body</h1>
-        <Link to="/garden"><button className="enter-button"><p>Garden</p></button></Link>
-        <Link to="/park"><button className="enter-button"><p>Park</p></button></Link>
-        <Link to="/beach"><button className="enter-button"><p>Beach</p></button></Link>
+        <div className="main-upper">
+          <div className="home-message">
+            <h2>Where would you prefer to relax?</h2>
+          </div>
+        </div>
+
+        <div className="main-lower">
+          <div className="enter-garden">
+            <Link to="/garden"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+          </div>
+          <div className="enter-park">
+            <Link to="/park"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+          </div>
+          <div className="enter-beach">
+            <Link to="/beach"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+          </div>
+        </div>
       </div>
 
       <div className="footer">
