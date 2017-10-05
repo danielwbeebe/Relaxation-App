@@ -22,10 +22,10 @@ const Home = (props) => {
             <Link to="/garden"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
           </div>
           <div className="enter-park">
-            <Link to="/park"><img src='./images/welcome-park.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+            <Link to="/park"><img src='./images/welcome-park.png' alt="Copyright 2016 Photo By Dan Beebe"></img></Link>
           </div>
           <div className="enter-beach">
-            <Link to="/beach"><img src='./images/welcome-river.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+            <Link to="/beach"><img src='./images/welcome-river.png' alt="Copyright 2017 Photo By Dan Beebe"></img></Link>
           </div>
         </div>
       </div>

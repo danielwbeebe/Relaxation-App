@@ -11,7 +11,7 @@ const Garden = (props) => {
       </div>
 
       <div className="main">
-        <h1>Garden Page</h1>
+
       </div>
 
       <div className="footer">
