@@ -42,7 +42,7 @@ class Home extends Component {
               <Link to="/park"><img src='./images/welcome-park.png' alt="Copyright 2016 By Dan Beebe"></img></Link>
             </div>
             <div className="enter-beach">
-              <Link to="/beach"><img src='./images/welcome-river.png' alt="Copyright 2017 By Dan Beebe"></img></Link>
+              <Link to="/river"><img src='./images/welcome-river.png' alt="Copyright 2017 By Dan Beebe"></img></Link>
             </div>
           </div>
         </div>
