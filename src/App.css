@@ -181,6 +181,18 @@ table {
 .garden .header {
   background-color: #015249;
   color: white;
+  justify-content: space-around;
+}
+
+.timer-button {
+  background-color: #FF7875;
+  color: white;
+  border-radius: 20px;
+}
+
+.timer-button:hover {
+  background-color: white;
+  color: #FF7875;
 }
 
 .garden .main {
@@ -201,6 +213,7 @@ table {
 .park .header {
   background-color: #015249;
   color: white;
+  justify-content: space-around;
 }
 
 .park .main {
@@ -221,6 +234,7 @@ table {
 .beach .header {
   background-color: #015249;
   color: white;
+  justify-content: space-around;
 }
 
 .beach .main {
