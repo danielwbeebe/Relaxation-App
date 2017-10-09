@@ -11,7 +11,7 @@ const Park = (props) => {
       </div>
 
       <div className="main">
-        <h1>Park Page</h1>
+
       </div>
 
       <div className="footer">

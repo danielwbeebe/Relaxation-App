@@ -206,6 +206,9 @@ table {
 .park .main {
   background-color: white;
   color: black;
+  background-image: url("/images/park-fall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .park .footer {
@@ -223,6 +226,9 @@ table {
 .beach .main {
   background-color: white;
   color: black;
+  background-image: url("/images/hudson-river.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .beach .footer {

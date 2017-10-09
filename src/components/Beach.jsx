@@ -11,7 +11,7 @@ const Beach = (props) => {
       </div>
 
       <div className="main">
-        <h1>Beach Page</h1>
+
       </div>
 
       <div className="footer">
