@@ -7,13 +7,13 @@ class Garden extends Component {
   constructor(){
     super();
       this.state = {
-        sound: false,
+
       }
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
-    this.playSound();
+
   }
 
   playSound() {
@@ -22,18 +22,13 @@ class Garden extends Component {
     audio.play();
   }
 
-  pauseSound() {
-    var audio = new Audio(birdSound);
-    audio.pause();
-  }
-
   render(){
     return (
       <div className="garden">
 
         <div className="header">
-          <Link to="/home" onClick="pauseSound"><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button"><h4>3-Minute Timer</h4></button>
+          <Link to="/home" onClick=" "><h1 className="header-link">Home</h1></Link>
+          <button className="timer-button" onClick={this.playSound}><h4>Play Sounds</h4></button>
         </div>
 
         <div className="main">
