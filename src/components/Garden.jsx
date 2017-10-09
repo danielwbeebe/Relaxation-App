@@ -28,7 +28,7 @@ class Garden extends Component {
 
         <div className="header">
           <Link to="/home" onClick=" "><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button" onClick={this.playSound}><h4>Play Sounds</h4></button>
+          <button className="timer-button" onClick={this.playSound}><h4>Garden Sounds</h4></button>
         </div>
 
         <div className="main">
