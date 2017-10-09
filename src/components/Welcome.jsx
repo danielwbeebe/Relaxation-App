@@ -13,7 +13,7 @@ const Welcome = () => {
       <div className="main">
 
         <div className="welcome-left">
-          <Link to="/home"><img src='./images/welcome-boston.png' alt="Copyright 2014 Photo By Dan Beebe"></img></Link>
+          <Link to="/home"><img src='./images/welcome-boston.png' alt="Copyright 2014 By Dan Beebe"></img></Link>
         </div>
 
         <div className="welcome-right">
