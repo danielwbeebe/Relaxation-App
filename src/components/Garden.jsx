@@ -7,7 +7,7 @@ const Garden = (props) => {
     <div className="garden">
 
       <div className="header">
-        <Link to="/home"><h1 className="header-link">Dan's Relax App</h1></Link>
+        <Link to="/home"><h1 className="header-link">Home</h1></Link>
         <button className="timer-button"><h4>3-Minute Timer</h4></button>
       </div>
 
