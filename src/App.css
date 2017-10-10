@@ -307,6 +307,12 @@ a:hover {
 /*reactive design for smaller screens*/
 @media (max-width: 800px) {
 
+  .welcome-left img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
   .enter-garden img, .enter-park img, .enter-beach img {
     border-radius: 50%;
     width: 100px;
