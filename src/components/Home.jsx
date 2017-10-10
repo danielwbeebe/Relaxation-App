@@ -36,13 +36,13 @@ class Home extends Component {
 
           <div className="main-lower">
             <div className="enter-garden">
-              <Link to="/garden"><img src='./images/welcome-boston.png' alt="Copyright 2014 By Dan Beebe"></img></Link>
-            </div>
-            <div className="enter-park">
-              <Link to="/park"><img src='./images/welcome-park.png' alt="Copyright 2016 By Dan Beebe"></img></Link>
+              <Link to="/garden"><h3 className="home-link">Spring In The Garden</h3><img src='./images/welcome-boston.png' alt="Copyright 2014 By Dan Beebe"></img></Link>
             </div>
             <div className="enter-beach">
-              <Link to="/river"><img src='./images/welcome-river.png' alt="Copyright 2017 By Dan Beebe"></img></Link>
+              <Link to="/river"><h3 className="home-link">Summer By The River</h3><img src='./images/welcome-river.png' alt="Copyright 2017 By Dan Beebe"></img></Link>
+            </div>
+            <div className="enter-park">
+              <Link to="/park"><h3 className="home-link">Autumn In The Park</h3><img src='./images/welcome-park.png' alt="Copyright 2016 By Dan Beebe"></img></Link>
             </div>
           </div>
         </div>

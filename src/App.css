@@ -163,6 +163,9 @@ table {
   flex-direction: row;
   width: 100vw;
   justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .enter-garden img, .enter-park img, .enter-beach img {
@@ -292,9 +295,27 @@ a:hover {
   color: #FF7875;
 }
 
+.home-link {
+  color: black;
+}
+
+.home-link:hover {
+  color: #FF7875;
+}
+
 
 /*reactive design for smaller screens*/
 @media (max-width: 800px) {
+
+  .enter-garden img, .enter-park img, .enter-beach img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-lower {
+    flex-direction: column;
+  }
 
   h1 {
     font-size: 30px;
