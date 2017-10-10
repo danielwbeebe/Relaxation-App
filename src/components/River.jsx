@@ -1,26 +1,47 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-const Beach = (props) => {
+import riverSound from './sounds/river-sound.wav';
 
-  return (
-    <div className="beach">
+class Beach extends Component {
+  constructor(){
+    super();
+      this.state = {
 
-      <div className="header">
-        <Link to="/home"><h1 className="header-link">Home</h1></Link>
-        <button className="timer-button"><h4>3-Minute Timer</h4></button>
+      }
+    this.componentDidMount = this.componentDidMount.bind(this);
+  }
+
+  componentDidMount() {
+
+  }
+
+  playSound() {
+    // free sound from http://freesound.org/people/poorenglishjuggler/sounds/367631/
+    var audio = new Audio(riverSound);
+    audio.play();
+  }
+
+  render(){
+    return (
+      <div className="beach">
+
+        <div className="header">
+          <Link to="/home" onClick=" "><h1 className="header-link">Home</h1></Link>
+          <button className="timer-button" onClick={this.playSound}><h4>River Running</h4></button>
+        </div>
+
+        <div className="main">
+
+        </div>
+
+        <div className="footer">
+          <a href="https://github.com/danielwbeebe" target="_blank" rel="noopener noreferrer"><h2>Created By Dan Beebe</h2></a>
+        </div>
+
       </div>
-
-      <div className="main">
-
-      </div>
-
-      <div className="footer">
-        <a href="https://github.com/danielwbeebe" target="_blank" rel="noopener noreferrer"><h2>Created By Dan Beebe</h2></a>
-      </div>
-
-    </div>
-  )
+    )
+  }
 }
 
 export default Beach;
