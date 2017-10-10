@@ -28,7 +28,7 @@ class Beach extends Component {
 
         <div className="header">
           <Link to="/home" onClick=" "><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button" onClick={this.playSound}><h4>River Running</h4></button>
+          <button className="timer-button" onClick={this.playSound}><h4>Listen</h4></button>
         </div>
 
         <div className="main">
