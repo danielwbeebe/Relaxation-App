@@ -10,6 +10,8 @@ Dan's Relax App is inspired by Calm.com and incorporated scenery and sounds I fi
 
 Upon entering, the user can select from 3 different relaxation scenes: a park (Boston Public Garden), a river (the Hudson), or a park (Central Park). For each page, the user can click a button to listen to relaxing sounds related to the imagery (birds chirping, water flowing, the breeze blowing).
 
+The app is deployed at:  http://relax-app.bitballoon.com/
+
 ## Technology
 
 Dan's Relax App was made using React.

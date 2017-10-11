@@ -27,7 +27,7 @@ class Park extends Component {
       <div className="park">
 
         <div className="header">
-          <Link to="/home" onClick=" "><h1 className="header-link">Home</h1></Link>
+          <Link to="/home"><h1 className="header-link">Home</h1></Link>
           <button className="timer-button" onClick={this.playSound}><h4>Listen</h4></button>
         </div>
 
