@@ -7,9 +7,11 @@ class Beach extends Component {
   constructor(){
     super();
       this.state = {
-
+        button: "Listen"
       }
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.playSound = this.playSound.bind(this);
+    this.stopSound = this.stopSound.bind(this);
   }
 
   componentDidMount() {
@@ -17,10 +19,21 @@ class Beach extends Component {
   }
 
   playSound() {
-    // free sound from http://freesound.org/people/poorenglishjuggler/sounds/367631/
-    var audio = new Audio(riverSound);
-    audio.loop = true;
-    audio.play();
+    if (this.state.button === "Listen") {
+      this.setState({
+        button: "Stop",
+      })
+      // free sound from http://freesound.org/people/poorenglishjuggler/sounds/367631/
+      var audio = new Audio(riverSound);
+      audio.loop = true;
+      audio.play();
+    } else {
+      this.stopSound();
+    }
+  }
+
+  stopSound() {
+    window.location.href='/river'
   }
 
   render(){
@@ -29,7 +42,7 @@ class Beach extends Component {
 
         <div className="header">
           <Link to="/home"><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button" onClick={this.playSound}><h4>Listen</h4></button>
+          <button className="timer-button" onClick={this.playSound}><h4>{this.state.button}</h4></button>
         </div>
 
         <div className="main">
