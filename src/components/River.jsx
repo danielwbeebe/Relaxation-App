@@ -19,6 +19,7 @@ class Beach extends Component {
   playSound() {
     // free sound from http://freesound.org/people/poorenglishjuggler/sounds/367631/
     var audio = new Audio(riverSound);
+    audio.loop = true;
     audio.play();
   }
 

@@ -19,6 +19,7 @@ class Garden extends Component {
   playSound() {
     // free bird sound from klankbeeld at https://freesound.org/people/klankbeeld/sounds/187829/
     var audio = new Audio(birdSound);
+    audio.loop = true;
     audio.play();
   }
 

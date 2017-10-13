@@ -19,6 +19,7 @@ class Park extends Component {
   playSound() {
     // free sound from http://freesound.org/people/Pogotron/sounds/60848/
     var audio = new Audio(parkSound);
+    audio.loop = true;
     audio.play();
   }
 
