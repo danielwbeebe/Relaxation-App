@@ -35,3 +35,23 @@ Here is the code from App.js for the routing through the app:
         } 
 
 
+Here is the code from the Garden, River, and Park components to play the sound effects if the user clicks the "listen" button:
+
+    playSound() {
+      if (this.state.button === "Listen") {
+        this.setState({
+        button: "Stop",
+        })
+      audio.loop = true;
+      audio.play();
+      } else {
+        this.setState({
+          button: "Listen",
+        })
+        audio.pause();
+      }
+    }
+
+## Acknowledgments
+
+Thanks to Jacob for providing useful comments on the app and suggesting improvements which I have implemented
