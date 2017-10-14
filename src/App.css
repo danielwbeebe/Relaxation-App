@@ -50,7 +50,7 @@ table {
   -webkit-font-smoothing: antialiased;
 }
 
-/*applies universally*/
+/*applies default*/
 .App {
   display: flex;
   flex-direction: column;
@@ -206,6 +206,13 @@ table {
   background-image: url("/images/boston-garden.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#clock {
+  background-size: 100px 100px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
 }
 
 .garden .footer {

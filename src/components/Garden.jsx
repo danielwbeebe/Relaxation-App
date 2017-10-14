@@ -5,19 +5,21 @@ import birdSound from './sounds/garden-bird-sound.wav';
 
 // free bird sound from klankbeeld at https://freesound.org/people/klankbeeld/sounds/187829/
 var audio = new Audio(birdSound);
+var seconds = 0;
 
 class Garden extends Component {
   constructor(){
     super();
       this.state = {
         button: "Listen",
+        clock: false,
       }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.playSound = this.playSound.bind(this);
   }
 
   componentDidMount() {
-
+    document.getElementById("clock").style.display = "none";
   }
 
   playSound() {
@@ -27,11 +29,20 @@ class Garden extends Component {
       })
     audio.loop = true;
     audio.play();
+
+      var timerVar = setInterval(counter, 1000);
+      function counter() {
+      ++seconds;
+      document.getElementById("clock").innerHTML = seconds + " seconds";
+      document.getElementById("clock").style.display = "inline-block";
+      }
     } else {
       this.setState({
         button: "Listen",
       })
       audio.pause();
+      seconds = 0;
+      document.getElementById("clock").style.display = "none";
     }
   }
 
@@ -49,7 +60,9 @@ class Garden extends Component {
         </div>
 
         <div className="main">
-
+          <div id="clock">
+            <h1>CLOCK</h1>
+          </div>
         </div>
 
         <div className="footer">
