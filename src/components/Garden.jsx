@@ -16,6 +16,8 @@ class Garden extends Component {
       }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.playSound = this.playSound.bind(this);
+    this.clockOn = this.clockOn.bind(this);
+    this.addSeconds = this.addSeconds.bind(this);
   }
 
   componentDidMount() {
@@ -26,22 +28,31 @@ class Garden extends Component {
     if (this.state.button === "Listen") {
       this.setState({
       button: "Stop",
+      clock: "inline-block",
       })
     audio.loop = true;
     audio.play();
 
-      // var timer = setInterval(counter, 1000);
-      // function counter() {
-      // ++seconds;
-      // document.getElementById("clock").innerHTML = seconds + " seconds";
-      // document.getElementById("clock").style.display = "inline-block";
-      // }
+      this.clockOn();
     } else {
+      clearInterval(this.timer);
       this.setState({
         button: "Listen",
       })
       audio.pause();
+      document.getElementById("clock").style.display = "none";
     }
+  }
+
+  clockOn() {
+    var timer = setInterval(this.addSeconds, 1000);
+    this.addSeconds();
+  }
+
+  addSeconds() {
+    seconds = seconds + 1;
+    document.getElementById("clock").innerHTML = seconds + " seconds";
+    document.getElementById("clock").style.display = "inline-block";
   }
 
   stopSound() {
