@@ -12,14 +12,14 @@ class Garden extends Component {
     super();
       this.state = {
         button: "Listen",
-        clock: false,
+        clock: "none",
       }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.playSound = this.playSound.bind(this);
   }
 
   componentDidMount() {
-    document.getElementById("clock").style.display = "none";
+    document.getElementById("clock").style.display = this.state.clock;
   }
 
   playSound() {
@@ -30,19 +30,17 @@ class Garden extends Component {
     audio.loop = true;
     audio.play();
 
-      var timerVar = setInterval(counter, 1000);
-      function counter() {
-      ++seconds;
-      document.getElementById("clock").innerHTML = seconds + " seconds";
-      document.getElementById("clock").style.display = "inline-block";
-      }
+      // var timer = setInterval(counter, 1000);
+      // function counter() {
+      // ++seconds;
+      // document.getElementById("clock").innerHTML = seconds + " seconds";
+      // document.getElementById("clock").style.display = "inline-block";
+      // }
     } else {
       this.setState({
         button: "Listen",
       })
       audio.pause();
-      seconds = 0;
-      document.getElementById("clock").style.display = "none";
     }
   }
 
