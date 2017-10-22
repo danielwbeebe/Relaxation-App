@@ -10,24 +10,66 @@ class Garden extends Component {
   constructor(){
     super();
       this.state = {
-        button: "Listen",
+        button: "Minute Meditation",
+        timer: "Minute Timer",
+        seconds: 60,
+        clock: null,
       }
     this.playSound = this.playSound.bind(this);
+    this.stopSound = this.stopSound.bind(this);
+    this.startTimer = this.startTimer.bind(this);
+    this.countSeconds = this.countSeconds.bind(this);
+  }
+
+  componentDidMount() {
+    document.getElementById("clock").style.display = "none";
   }
 
   playSound() {
-    if (this.state.button === "Listen") {
+    if (this.state.button === "Minute Meditation") {
       this.setState({
-      button: "Stop",
+      button: "",
       })
     audio.loop = true;
     audio.play();
+    this.startTimer();
     }
     else {
       this.setState({
-        button: "Listen",
+        button: "Minute Meditation",
       })
       audio.pause();
+    }
+  }
+
+  stopSound() {
+    audio.pause();
+  }
+
+  startTimer() {
+    if (this.state.timer === "Minute Timer") {
+      this.setState({
+        timer: "Stop Timer",
+      })
+    document.getElementById("timer-button").style.display = "none";
+    let clock = setInterval(this.countSeconds, 1000);
+    document.getElementById("clock").style.display = "inline-block";
+    }
+  }
+
+  countSeconds() {
+    if (this.state.seconds > 0 ) {
+      this.setState({
+        seconds: this.state.seconds -1,
+      })
+    }
+    else {
+      this.stopSound();
+      document.getElementById("timer-button").style.display = "inline-block";
+      document.getElementById("clock").style.display = "none";
+      this.setState({
+        button: "Minute Meditation",
+      })
     }
   }
 
@@ -36,12 +78,14 @@ class Garden extends Component {
       <div className="garden">
 
         <div className="header">
-          <Link to="/home" onClick={this.playSound}><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button" onClick={this.playSound}><h4>{this.state.button}</h4></button>
+          <Link to="/home" onClick={this.stopSound}><h1 className="header-link">Home</h1></Link>
+          <button className="timer-button" id="timer-button" onClick={this.playSound}><h4>{this.state.button}</h4></button>
         </div>
 
         <div className="main">
-
+          <div id="clock">
+            {this.state.seconds}
+          </div>
         </div>
 
         <div className="footer">
