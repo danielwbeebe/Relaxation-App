@@ -10,26 +10,33 @@ class River extends Component {
   constructor(){
     super();
       this.state = {
-        button: "Listen"
+        button: "Start Meditation",
+        timer: "Minute Timer",
+        seconds: 0,
+        clock: null,
       }
-    this.componentDidMount = this.componentDidMount.bind(this);
     this.playSound = this.playSound.bind(this);
+    this.stopSound = this.stopSound.bind(this);
+    this.startTimer = this.startTimer.bind(this);
+    this.countSeconds = this.countSeconds.bind(this);
   }
 
   componentDidMount() {
-
+    document.getElementById("clock").style.display = "none";
   }
 
   playSound() {
-    if (this.state.button === "Listen") {
+    if (this.state.button === "Start Meditation") {
       this.setState({
-        button: "Stop",
+      button: "",
       })
-      audio.loop = true;
-      audio.play();
-    } else {
+    audio.loop = true;
+    audio.play();
+    this.startTimer();
+    }
+    else {
       this.setState({
-        button: "Listen",
+        button: "Minute Meditation",
       })
       audio.pause();
     }
@@ -39,17 +46,33 @@ class River extends Component {
     audio.pause();
   }
 
+  startTimer() {
+    if (this.state.timer === "Minute Timer") {
+    document.getElementById("timer-button").style.display = "none";
+    let clock = setInterval(this.countSeconds, 1000);
+    document.getElementById("clock").style.display = "inline-block";
+    }
+  }
+
+  countSeconds() {
+    this.setState({
+      seconds: this.state.seconds +1,
+    })
+  }
+
   render(){
     return (
       <div className="beach">
 
         <div className="header">
           <Link to="/home" onClick={this.stopSound}><h1 className="header-link">Home</h1></Link>
-          <button className="timer-button" onClick={this.playSound}><h4>{this.state.button}</h4></button>
+          <button className="timer-button" id="timer-button" onClick={this.playSound}><h4>{this.state.button}</h4></button>
         </div>
 
         <div className="main">
-
+          <div id="clock">
+            {this.state.seconds}
+          </div>
         </div>
 
         <div className="footer">
