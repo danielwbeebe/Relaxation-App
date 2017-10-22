@@ -10,9 +10,9 @@ class Garden extends Component {
   constructor(){
     super();
       this.state = {
-        button: "Minute Meditation",
+        button: "Start Meditation",
         timer: "Minute Timer",
-        seconds: 60,
+        seconds: 0,
         clock: null,
       }
     this.playSound = this.playSound.bind(this);
@@ -26,7 +26,7 @@ class Garden extends Component {
   }
 
   playSound() {
-    if (this.state.button === "Minute Meditation") {
+    if (this.state.button === "Start Meditation") {
       this.setState({
       button: "",
       })
@@ -48,9 +48,6 @@ class Garden extends Component {
 
   startTimer() {
     if (this.state.timer === "Minute Timer") {
-      this.setState({
-        timer: "Stop Timer",
-      })
     document.getElementById("timer-button").style.display = "none";
     let clock = setInterval(this.countSeconds, 1000);
     document.getElementById("clock").style.display = "inline-block";
@@ -58,19 +55,9 @@ class Garden extends Component {
   }
 
   countSeconds() {
-    if (this.state.seconds > 0 ) {
-      this.setState({
-        seconds: this.state.seconds -1,
-      })
-    }
-    else {
-      this.stopSound();
-      document.getElementById("timer-button").style.display = "inline-block";
-      document.getElementById("clock").style.display = "none";
-      this.setState({
-        button: "Minute Meditation",
-      })
-    }
+    this.setState({
+      seconds: this.state.seconds +1,
+    })
   }
 
   render(){
