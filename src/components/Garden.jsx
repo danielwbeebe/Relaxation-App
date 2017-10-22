@@ -25,20 +25,12 @@ class Garden extends Component {
   }
 
   playSound() {
-    if (this.state.button === "Minute Meditation") {
-      this.setState({
-      button: "",
-      })
+    this.setState({
+    button: "",
+    })
     audio.loop = true;
     audio.play();
     this.startTimer();
-    }
-    else {
-      this.setState({
-        button: "Minute Meditation",
-      })
-      audio.pause();
-    }
   }
 
   stopSound() {

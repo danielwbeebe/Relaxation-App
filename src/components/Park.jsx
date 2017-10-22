@@ -10,8 +10,7 @@ class Park extends Component {
   constructor(){
     super();
       this.state = {
-        button: "Start Meditation",
-        timer: "Minute Timer",
+        button: "Minute Meditation",
         seconds: 0,
         clock: null,
       }
@@ -26,7 +25,7 @@ class Park extends Component {
   }
 
   playSound() {
-    if (this.state.button === "Start Meditation") {
+    if (this.state.button === "Minute Meditation") {
       this.setState({
       button: "",
       })
