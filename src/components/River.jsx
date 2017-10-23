@@ -10,8 +10,7 @@ class River extends Component {
   constructor(){
     super();
       this.state = {
-        button: "Start Meditation",
-        timer: "Minute Timer",
+        button: "Minute Meditation",
         seconds: 0,
         clock: null,
       }
@@ -26,20 +25,12 @@ class River extends Component {
   }
 
   playSound() {
-    if (this.state.button === "Start Meditation") {
-      this.setState({
-      button: "",
-      })
+    this.setState({
+    button: "",
+    })
     audio.loop = true;
     audio.play();
     this.startTimer();
-    }
-    else {
-      this.setState({
-        button: "Minute Meditation",
-      })
-      audio.pause();
-    }
   }
 
   stopSound() {
@@ -47,17 +38,22 @@ class River extends Component {
   }
 
   startTimer() {
-    if (this.state.timer === "Minute Timer") {
     document.getElementById("timer-button").style.display = "none";
     let clock = setInterval(this.countSeconds, 1000);
     document.getElementById("clock").style.display = "inline-block";
-    }
   }
 
   countSeconds() {
-    this.setState({
-      seconds: this.state.seconds +1,
-    })
+    if (this.state.seconds <= 60) {
+      this.setState({
+        seconds: this.state.seconds +1,
+      })
+    } if (this.state.seconds > 60) {
+      audio.pause();
+      this.setState({
+        seconds: "Done",
+      })
+    }
   }
 
   render(){
