@@ -206,6 +206,7 @@ table {
   background-image: url("/images/boston-garden.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 90vh;
 }
 
 #clock, #clock3 {
@@ -223,6 +224,7 @@ table {
 .garden .footer {
   background-color: #015249;
   color: white;
+  height: 0vh;
 }
 
 /*park page*/
