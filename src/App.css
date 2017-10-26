@@ -209,7 +209,7 @@ table {
   height: 90vh;
 }
 
-#clock, #clock3 {
+#clock, #clock3, #clock5 {
   background-size: 100px 100px;
   background-color: black;
   color: white;
