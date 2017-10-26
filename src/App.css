@@ -208,7 +208,7 @@ table {
   background-size: cover;
 }
 
-#clock {
+#clock, #clock3 {
   background-size: 100px 100px;
   background-color: black;
   color: white;
