@@ -241,11 +241,13 @@ table {
   background-image: url("/images/park-fall.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 90vh;
 }
 
 .park .footer {
   background-color: #015249;
   color: white;
+  height: 0vh;
 }
 
 /*beach page*/
@@ -262,11 +264,13 @@ table {
   background-image: url("/images/hudson-river.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 90vh;
 }
 
 .beach .footer {
   background-color: #015249;
   color: white;
+  height: 0vh;
 }
 
 /*fonts*/
