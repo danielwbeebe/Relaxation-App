@@ -273,6 +273,29 @@ table {
   height: 0vh;
 }
 
+/*winter page*/
+
+.winter .header {
+  background-color: #015249;
+  color: white;
+  justify-content: space-around;
+}
+
+.winter .main {
+  background-color: white;
+  color: black;
+  background-image: url("/images/winter-park.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+.winter .footer {
+  background-color: #015249;
+  color: white;
+  height: 0vh;
+}
+
 /*fonts*/
 
 h1 {
