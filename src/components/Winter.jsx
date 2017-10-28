@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-import winterSound from './sounds/river-sound.wav';
+import winterSound from './sounds/winter-sound.wav';
 
+// free sound from http://freesound.org/people/ERR0/sounds/210220/
 var audio = new Audio(winterSound);
 
 class Winter extends Component {
