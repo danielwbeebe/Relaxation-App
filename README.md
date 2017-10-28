@@ -8,7 +8,7 @@
 
 Dan's Relax App is inspired by Calm.com and incorporated scenery and sounds I find relaxing. All photographs were taken by me.
 
-Upon entering, the user can select from 4 different relaxation scenes: winter in the park (Central Park), a park (Boston Public Garden), a river (the Hudson), or a park (Central Park). For each page, the user can click a button to listen to relaxing sounds related to the imagery (a winter breeze, birds chirping, water flowing, the fall breeze blowing).
+Upon entering, the user can select from 4 different relaxation scenes: winter in the park (Central Park), spring in the garden (Boston Public Garden), summer by the river (the Hudson), or fall in the park (Central Park). For each page, the user can click a button to listen to relaxing sounds related to the imagery (a winter breeze, birds chirping, water flowing, the fall breeze blowing).
 
 The app is deployed at:  http://relax-app.bitballoon.com/
 
@@ -28,6 +28,7 @@ Here is the code from App.js for the routing through the app:
                   <Route exact path="/garden" render={() => <Garden />} />
                   <Route exact path="/park" render={() => <Park />} />
                   <Route exact path="/river" render={() => <River />} />
+                  <Route exact path="/winter" render={() => <Winter />} />
                 </div>
               </Router>
             );
@@ -35,7 +36,7 @@ Here is the code from App.js for the routing through the app:
         } 
 
 
-Here is the code from the Garden, River, and Park components to play the sound effects if the user clicks the "listen" button:
+Here is the code from the Winter, Garden, River, and Park components to play the sound effects if the user clicks the "listen" button:
 
     playSound() {
       if (this.state.button === "Listen") {
